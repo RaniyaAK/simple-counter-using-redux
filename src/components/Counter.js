@@ -25,9 +25,9 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center', // vertically center
-    alignItems: 'center',     // horizontally center
-    height: '100vh',          // full viewport height
+    justifyContent: 'center', 
+    alignItems: 'center',    
+    height: '100vh',          
     fontFamily: 'sans-serif',
   },
   heading: {
