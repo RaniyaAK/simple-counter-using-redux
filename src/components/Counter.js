@@ -7,8 +7,10 @@ function Counter() {
   const dispatch = useDispatch();
 
   return (
-    <div style={styles.container}> 
-      <h1>Counter: {count}</h1>
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Counter</h1>
+      <p style={styles.count}>{count}</p>
+
       <div>
         <button style={styles.button} onClick={() => dispatch(decrement())}>-</button>
         <button style={styles.button} onClick={() => dispatch(increment())}>+</button>
@@ -19,21 +21,33 @@ function Counter() {
 
 export default Counter;
 
-
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    fontFamily: 'Arial, sans-serif',
-    gap: '10px',
+    justifyContent: 'center', // vertically center
+    alignItems: 'center',     // horizontally center
+    height: '100vh',          // full viewport height
+    fontFamily: 'sans-serif',
+  },
+  heading: {
+    fontSize: '32px',
+    marginBottom: '10px',
+    color: '#333',
+  },
+  count: {
+    fontSize: '40px',
+    fontWeight: 'bold',
+    marginBottom: '20px',
   },
   button: {
-    padding: '10px 20px',
-    fontSize: '16px',
+    backgroundColor: '#007bff',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    padding: '8px 16px',
+    fontSize: '18px',
+    margin: '0 8px',
     cursor: 'pointer',
-    margin: '5px',
   },
 };
